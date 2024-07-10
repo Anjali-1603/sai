@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+            border: 2px solid #333; /* Border around the container */
+            padding: 20px;
+            
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            
+           
+        }
+        .college-name {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+            background-color: #1f77b4;
+            
+        
+        }
+        .address {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .courses {
+            list-style: none;
+            padding-left: 0;
+        }
+        .courses li {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color:burlywood;
+        }
+        .courses .engineering {
+            color: #1f77b4; /* blue */
+        }
+        .courses .arts {
+            color: #ff7f0e; /* orange */
+        }
+        .courses .science {
+            color: #2ca02c; /* green */
+        }
+        .scrolling-text {
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 64px;
+            color: #eee4e4;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            transform: perspective(1000px) rotateX(30deg);
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            
+        }
+        .college-image {
+            display: block;
+            margin: 0 auto;
+            max-width:1000px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="college-name">Sri Vasavi Engineering College </div>
+        <div class="address">. Sri Vasavi Engineering College. Pedatadepalli, Tadepalligudem - 534 101. West Godavari Dist., Andhra Pradesh. Phone Nos.: +91-8818-284355, 284344, 284544. </div>
+    </div>
+
+    <div class="courses">
+        <h2>Courses Offered</h2>
+        <ul>
+            <li class="engineering">Engineering</li>
+            <ul>
+                <li>CSE</li>
+                <li>ECE</li>
+                <li>MECH</li>
+                <li>EEE</li>
+            </ul>
+            <li class="arts">Arts</li>
+            <li class="science">Science</li>
+        </ul>
+    </div>
+
+    <div class="scrolling-text">
+        <marquee behavior="scroll" direction="left">Welcome to Sri Vasavi Engineering College </marquee>
+    </div>
+
+    <div>
+        <img class="college-image" src="vas.jpg" alt="College Image">
+    </div>
+</body>
+</html>
