@@ -1,0 +1,92 @@
+ge that includes an image gallery (3images in one row) which acts as a link. Also, images should be with caption &scales responsively to the page. 
+
+HTML SOURCE CODE:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .gallery-item {
+    flex: 0 0 calc(33.33% - 20px); /* 3 items per row with 20px gap */
+    max-width: calc(33.33% - 20px);
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+    opacity: 0; /* Initially hidden */
+  }
+
+  .gallery-item:hover .caption {
+    opacity: 1; /* Show caption on hover */
+  }
+</style>
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="#">
+      <img src="bird 1.jpg" alt="Image 1">
+      <div class="caption">Parrot</div>
+    </a>
+  </div>
+  
+  <div class="gallery-item">
+    <a href="#">
+      <img src="bird4.jpg" alt="Image 2">
+      <div class="caption">Peacock</div>
+    </a>
+  </div>
+  
+  <div class="gallery-item">
+    <a href="#">
+      <img src="bird3.jpg" alt="Image 3">
+      <div class="caption">Sparrow</div>
+    </a>
+  </div>
+  
+ 
+</div>
+
+</body>
+</html
