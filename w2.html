@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Personal Data Form</h2>
+    <form action="/submit-your-form-handler" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="hobbies">Hobbies:</label>
+        <select id="hobbies" name="hobbies[]" multiple>
+            <option value="sports">Sports</option>
+            <option value="music">Music</option>
+            <option value="reading">Reading</option>
+            <option value="gardening">Gardening</option>
+            <option value="traveling">Traveling</option>
+        </select>
+        
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+        
+        <label>Interests:</label>
+        <label><input type="checkbox" name="interests[]" value="programming"> Programming</label>
+        <label><input type="checkbox" name="interests[]" value="cooking"> Cooking</label>
+        <label><input type="checkbox" name="interests[]" value="photography"> Photography</label>
+        <label><input type="checkbox" name="interests[]" value="crafts"> Crafts</label>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
